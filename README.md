@@ -7,9 +7,9 @@ pyTelegramBotAPI, SpeechRecognition, mysql-connector-python.
 This can be done with the commands:
 
 `pip install pyTelegramBotAPI`
-***
+
 `pip install SpeechRecognition`
-***
+
 `pip install mysql-connector-python`
 
 You also need to download and put the "ffmpeg.exe" file in the "transcribe_audio folder"
