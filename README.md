@@ -5,10 +5,10 @@ For this to work you need to install some python libraries, namely
 pyTelegramBotAPI, SpeechRecognition, mysql-connector-python.
 
 This can be done with the commands:
-var a = 1;
-`pip install pyTelegramBotAPI`
-`pip install SpeechRecognition`
-`pip install mysql-connector-python`
+
+`pip install pyTelegramBotAPI
+pip install SpeechRecognition
+pip install mysql-connector-python`
 
 You also need to download and put the "ffmpeg.exe" file in the "transcribe_audio folder"
 
