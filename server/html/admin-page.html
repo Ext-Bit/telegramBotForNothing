@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Не вход</title>
+    <link rel="stylesheet" href="styles/materialize.min.css">
+</head>
+<body>
+    <div class="container" id="app">
+        <div class="row">
+            <div class="col s12 m10 l8 offset-m1 offset-l2">
+                <h4>Страничка админа</h4><br>
+                <button @click="reload_table" class="btn waves-effect waves-light left" type="button">Обновить</button><br><br>
+                <table class="centered highlight">
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>username</th>
+                            <th>name</th>
+                            <th>age</th>
+                            <th>step</th>
+                            <th>game_state</th>
+                            <th>state</th>
+                            <th>button</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="item in data_from_db">
+                            <td>{{ item.id }}</td>
+                            <td>{{ item.username }}</td>
+                            <td>{{ item.name }}</td>
+                            <td>{{ item.age }}</td>
+                            <td>{{ item.step }}</td>
+                            <td>{{ item.game_state }}</td>
+                            <td v-show="!show_input">{{ item.state }}</td>
+                            <td v-show="show_input"><input v-model="item.state" type="text" class="validate" style="width: 12px;"></td>
+                            <td><button class="btn waves-effect waves-light" @click="change_show_input(item.id, item.state)">Изменить</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+      <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <script src="js/admin-page.js"></script>
+</body>
+</html>
